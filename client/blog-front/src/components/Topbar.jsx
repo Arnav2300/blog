@@ -4,7 +4,6 @@ import logo from "../assets/logo.svg";
 import profileImg from "../assets/profile.jpg";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import {
-  HiOutlineBookmark,
   HiOutlinePencilSquare,
   HiOutlineMagnifyingGlass,
   HiOutlineBell,
@@ -19,11 +18,11 @@ const Topbar = () => {
   }
 
   function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
+    return classes.filter(Boolean).join(" ");
   }
 
   return (
-    <nav className="bg-White py-1 dark:bg-Black">
+    <nav className="bg-white bg-opacity-30 backdrop-blur-md py-1 sticky top-0 dark:bg-black dark:bg-opacity-25 border-b dark:border-gray-500 z-50">
       <div className="container flex items-center justify-between mx-auto">
         <div className="flex items-center">
           <a href="#" className="">
@@ -61,46 +60,45 @@ const Topbar = () => {
             </Menu.Button>
             <Menu.Items className="absolute right-0 z-10 mt-[3rem] w-56 origin-top-right rounded-md bg-White shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none md:mt-[4.5rem]">
               <div className="py-1 px-1">
-              <Menu.Item className="text-base rounded">
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-Teal text-White' : 'bg-grey-500',
-                    'block px-4 py-2 text-Black'
+                <Menu.Item className="text-base rounded">
+                  {({ active }) => (
+                    <a
+                      href="#"
+                      className={classNames(
+                        active ? "bg-Teal text-White" : "bg-grey-500",
+                        "block px-4 py-2 text-Black"
+                      )}
+                    >
+                      Account settings
+                    </a>
                   )}
-                >
-                  Account settings
-                </a>
-              )}                
-              </Menu.Item>
-              <Menu.Item className="text-base rounded">
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-Teal text-White' : 'bg-grey-500',
-                    'block px-4 py-2 text-Black'
+                </Menu.Item>
+                <Menu.Item className="text-base rounded">
+                  {({ active }) => (
+                    <a
+                      href="#"
+                      className={classNames(
+                        active ? "bg-Teal text-White" : "bg-grey-500",
+                        "block px-4 py-2 text-Black"
+                      )}
+                    >
+                      Account settings
+                    </a>
                   )}
-                >
-                  Account settings
-                </a>
-              )}                
-              </Menu.Item>
-              <Menu.Item className="text-base rounded">
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-Teal text-White' : 'bg-grey-500',
-                    'block px-4 py-2 text-Black'
+                </Menu.Item>
+                <Menu.Item className="text-base rounded">
+                  {({ active }) => (
+                    <a
+                      href="#"
+                      className={classNames(
+                        active ? "bg-Teal text-White" : "bg-grey-500",
+                        "block px-4 py-2 text-Black"
+                      )}
+                    >
+                      Account settings
+                    </a>
                   )}
-                >
-                  Account settings
-                </a>
-              )}                
-              </Menu.Item>
-              
+                </Menu.Item>
               </div>
             </Menu.Items>
           </Menu>
@@ -110,18 +108,18 @@ const Topbar = () => {
       <Dialog
         open={isOpen}
         onClose={() => setIsOpen(false)}
-        className="relative z-50"
+        className="flex relative z-50"
       >
         <div
-          className="fixed inset-0 bg-White blur-[5px] opacity-[0.5] dark:bg-Black"
+          className="fixed inset-0 bg-White blur-[10px] opacity-[0.75] dark:bg-Black"
           aria-hidden="true"
         />
-        <Dialog.Panel>
-          <form className="relative flex items-center justify-center p-4">
+        <Dialog.Panel className="">
+          <form className="absolute inset-0 flex items-center justify-center">
             <input
               type="text"
               placeholder="Search"
-              className="bg-gray-300 text-Black rounded-lg pr-10 pl-5 py-2 focus:outline-none focus:ring focus:border-Teal w-max dark:bg-Grey dark:text-White"
+              className="-translate-y-[500px] bg-gray-300 text-Black rounded-lg pr-10 pl-5 py-2 focus:outline-none focus:ring focus:border-Teal w-max dark:bg-Grey dark:text-White"
             />
           </form>
         </Dialog.Panel>
