@@ -22,7 +22,7 @@ const Topbar = () => {
   }
 
   return (
-    <nav className="bg-white bg-opacity-30 backdrop-blur-md py-1 sticky top-0 dark:bg-black dark:bg-opacity-25 border-b dark:border-gray-500 z-50">
+    <nav className="bg-White bg-opacity-30 backdrop-blur-md py-1 sticky top-0 dark:bg-black dark:bg-opacity-30 border-b dark:border-Grey z-50">
       <div className="container flex items-center justify-between mx-auto">
         <div className="flex items-center">
           <a href="#" className="">

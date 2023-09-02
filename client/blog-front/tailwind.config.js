@@ -12,6 +12,9 @@ export default {
         'Navy': '#176B87',
         'Mint': '#DAFFFB',
       },
+      fontFamily: {
+        BarlowSC: ["Barlow Semi Condensed", "sans-serif"],
+       },
     },
   },
   plugins: [],
