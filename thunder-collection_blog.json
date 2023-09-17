@@ -1,0 +1,294 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "blog",
+    "dateExported": "2023-09-17T22:44:32.872Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "c64b5c2f-789f-4459-a0a5-a32d45c2ed92",
+            "name": "authentication",
+            "containerId": "",
+            "created": "2023-07-28T19:22:23.674Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "0c306cae-8ba0-4f20-bc9d-5e67c3236c25",
+            "name": "user",
+            "containerId": "",
+            "created": "2023-08-24T17:56:06.892Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "71c49733-a8d9-409e-83a5-53033eb52ce0",
+            "name": "posts",
+            "containerId": "",
+            "created": "2023-08-31T22:15:20.393Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "67490325-8e2e-4fe3-90ed-25705ce51c36",
+            "name": "category",
+            "containerId": "",
+            "created": "2023-09-02T21:06:40.304Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "4c7265cc-e3f6-47c3-b613-617b740d7552",
+            "name": "upload",
+            "containerId": "",
+            "created": "2023-09-02T21:14:58.831Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "7b0e4c33-2e1c-46e8-81d2-6a81960621fc",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "c64b5c2f-789f-4459-a0a5-a32d45c2ed92",
+            "name": "login",
+            "url": "localhost:3001/api/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-28T19:18:20.061Z",
+            "modified": "2023-09-14T21:25:16.638Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"arnav\",\n  \"password\":\"abc123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c497ab3c-e8f9-4924-a776-d9cc751543a3",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "c64b5c2f-789f-4459-a0a5-a32d45c2ed92",
+            "name": "register",
+            "url": "localhost:3001/api/auth/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-28T19:21:58.578Z",
+            "modified": "2023-09-14T21:24:50.798Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"arnav5\",\n  \"email\":\"abcd@gmail.com\",\n  \"password\":\"abc123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "760a0cb9-6198-4a14-a6a0-f4a324d08f78",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "0c306cae-8ba0-4f20-bc9d-5e67c3236c25",
+            "name": "update",
+            "url": "localhost:3000/v1/user/64c2cf6272d665a50f2d5c8a",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-08-24T17:56:32.761Z",
+            "modified": "2023-08-24T18:13:54.120Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\":\"64c2cf6272d665a50f2d5c8a\",\n  \"username\":\"arnav_updated\",\n  \"password\":\"abcd1234\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9c77613d-2856-4dd5-a9e0-ee323bee7c79",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "0c306cae-8ba0-4f20-bc9d-5e67c3236c25",
+            "name": "delete",
+            "url": "localhost:3000/v1/user/64c2cf6272d665a50f2d5c8a",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-08-24T18:10:51.442Z",
+            "modified": "2023-08-24T18:13:49.054Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\":\"64c2cf6272d665a50f2d5c8a\",\n  \"username\":\"arnav_updated\",\n  \"password\":\"abcd1234\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9f74c766-a8c6-4866-a452-7381932bc926",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "0c306cae-8ba0-4f20-bc9d-5e67c3236c25",
+            "name": "get user",
+            "url": "localhost:3001/api/user/64e79e0353e88874be5f0672",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-08-24T18:15:45.209Z",
+            "modified": "2023-09-17T20:14:21.857Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6ae3d260-1b08-4dbc-9947-b3c0bfe6b2a6",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "71c49733-a8d9-409e-83a5-53033eb52ce0",
+            "name": "create",
+            "url": "localhost:3000/v1/post/64e79e0353e88874be5f0672",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-08-31T22:15:44.724Z",
+            "modified": "2023-09-02T18:13:15.960Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"arnav2\",\n  \"title\":\"first post2\",\n  \"desc\":\"first post desc\",\n  \"photo\":\"\",\n  \"categories\":\"none\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "568bc472-3c44-47ad-b5f1-98723ab93045",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "71c49733-a8d9-409e-83a5-53033eb52ce0",
+            "name": "update",
+            "url": "localhost:3000/v1/post/64f2f24950afe93da841cecd",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2023-09-01T09:00:08.849Z",
+            "modified": "2023-09-02T08:29:08.211Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"arnav\",\n  \"title\":\"first post updated\",\n  \"desc\":\"first post desc updated\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8e1679d8-9a3f-4b88-b7f6-8fade3914e0e",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "71c49733-a8d9-409e-83a5-53033eb52ce0",
+            "name": "delete",
+            "url": "localhost:3000/v1/post/64f2f24950afe93da841cecd",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2023-09-02T08:16:54.216Z",
+            "modified": "2023-09-02T08:30:41.322Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"arnav\",\n  \"title\":\"first post updated\",\n  \"desc\":\"first post desc updated\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fa19a75c-75ed-4b5c-8f7d-965c55c206db",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "71c49733-a8d9-409e-83a5-53033eb52ce0",
+            "name": "get",
+            "url": "localhost:3001/api/posts/64f2f321e160c440ee08e728",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-09-02T08:31:45.485Z",
+            "modified": "2023-09-13T08:47:03.575Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"arnav\",\n  \"title\":\"first post\",\n  \"desc\":\"first post desc\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "308663a7-29a0-4d03-9b18-efe3dcb4536d",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "71c49733-a8d9-409e-83a5-53033eb52ce0",
+            "name": "get all",
+            "url": "localhost:3000/v1/post?user=arnav2",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2023-09-02T18:11:43.089Z",
+            "modified": "2023-09-02T18:13:50.017Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "user",
+                    "value": "arnav2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"arnav\",\n  \"title\":\"first post\",\n  \"desc\":\"first post desc\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "88f96bff-9804-4b65-a1fe-742582b2fa16",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "67490325-8e2e-4fe3-90ed-25705ce51c36",
+            "name": "create",
+            "url": "localhost:3001/api/categories",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2023-09-02T21:06:51.021Z",
+            "modified": "2023-09-13T11:08:29.216Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"health\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f11580af-2b13-4f4c-b337-1836661b4b05",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "67490325-8e2e-4fe3-90ed-25705ce51c36",
+            "name": "get all",
+            "url": "localhost:3001/api/categories",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2023-09-02T21:10:38.986Z",
+            "modified": "2023-09-13T11:08:38.759Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f646f8c7-9a20-4331-9c98-ee2bde894a63",
+            "colId": "5883f5f2-59d5-482a-b12c-9d5dc97c1842",
+            "containerId": "4c7265cc-e3f6-47c3-b613-617b740d7552",
+            "name": "upload",
+            "url": "localhost:3000/v1/upload",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2023-09-02T21:15:07.849Z",
+            "modified": "2023-09-02T21:18:28.414Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "file",
+                        "value": "c:\\Users\\Dell\\Downloads\\cool-background.png"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ]
+}
