@@ -14,6 +14,7 @@ const app = express();
 dotenv.config();
 
 app.use(express.json());
+
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 mongoose
@@ -31,15 +32,15 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
-app.post("/v1/upload", upload.single("file"), (req, res) => {
+app.post("/api/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
 });
 
-app.use("/v1/auth", authRoute);
-app.use("/v1/user", userRoute);
-app.use("/v1/post", postRoute);
-app.use("/v1/categories", catRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/user", userRoute);
+app.use("/api/posts", postRoute);
+app.use("/api/categories", catRoute);
 
-app.listen("3000", () => {
+app.listen("3001", () => {
   console.log("server running!");
 });

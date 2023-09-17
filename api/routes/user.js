@@ -18,6 +18,8 @@ router.put("/:id", async (req, res) => {
         },
         { new: true } //returns updated user details
       );
+      console.log(req.params.id)
+      console.log(User)
       res.status(200).json(updatedUser);
     } catch (error) {
       res.status(500).json(error);
